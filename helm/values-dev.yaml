@@ -1,0 +1,19 @@
+configMap:
+  db_host: expense-development.cctag2uggud5.us-east-1.rds.amazonaws.com
+deployment:
+  replicas: 2
+  imageversion: v1
+  cpu: 100m
+  memory: 123Mi
+  imageURL: 596059882666.dkr.ecr.us-east-1.amazonaws.com/expense/frontend
+  imageVersion: IMAGE_VERSION
+tgb:
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:596059882666:targetgroup/expense-development/cb33231ad07a420a
+service:
+  port: 80
+  targetPort: 8080
+hpa:
+  targetCPUUtilizationPercentage: 15
+
+
+
