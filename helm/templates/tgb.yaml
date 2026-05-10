@@ -7,5 +7,5 @@ spec:
   serviceRef:
     name: frontend # route traffic to the awesome-service
     port: 80
-  targetGroupARN: {{ .Values.tgb.arn }}
+  targetGroupARN: {{ .Values.tgb.targetGroupARN }}
   targetType: ip
